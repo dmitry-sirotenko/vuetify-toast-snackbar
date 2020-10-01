@@ -397,6 +397,7 @@ function init(Vue) {
       if (wasActive && !isActive) {
         cmp.$nextTick(function () {
           cmp.$destroy();
+          cmp.$el.parentNode.removeChild(cmp.$el);
           cmp = null;
 
           if (queue.length) {

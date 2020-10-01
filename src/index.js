@@ -44,6 +44,7 @@ function init(Vue, globalOptions = {}) {
       if (wasActive && !isActive) {
         cmp.$nextTick(() => {
           cmp.$destroy()
+          cmp.$el.parentNode.removeChild(cmp.$el)
           cmp = null
 
           if (queue.length) {
