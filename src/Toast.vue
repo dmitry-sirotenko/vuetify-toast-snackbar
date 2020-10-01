@@ -29,18 +29,21 @@
       <slot></slot>
     </div>
 
-    <v-btn
-      :icon="!closeText"
-      :text="!!closeText"
-      class="vts__close"
-      :class="{ 'vts__close--icon': !closeText }"
-      :color="closeColor"
-      v-if="showClose"
-      @click="close"
-    >
-      <v-icon v-if="!closeText">{{ closeIcon }}</v-icon>
-      <span v-if="!!closeText">{{ closeText }}</span>
-    </v-btn>
+    <template v-slot:action="{ attrs }">
+      <v-btn
+          :icon="!closeText"
+          :text="!!closeText"
+          class="vts__close"
+          :class="{ 'vts__close--icon': !closeText }"
+          :color="closeColor"
+          v-if="showClose"
+          v-bind="attrs"
+          @click="close"
+      >
+        <v-icon v-if="!closeText">{{ closeIcon }}</v-icon>
+        <span v-if="!!closeText">{{ closeText }}</span>
+      </v-btn>
+    </template>
   </v-snackbar>
 </template>
 
@@ -151,6 +154,10 @@ export default {
     justify-content: flex-start;
   }
 
+  .vts .v-snack__action {
+    margin-right: 8px;
+  }
+
   .vts__icon {
     margin-right: 12px;
   }
@@ -160,7 +167,7 @@ export default {
   }
 
   .vts__close {
-    margin: 0 -8px 0 24px !important;
+    margin: 0 0 0 24px !important;
     justify-self: flex-end;
   }
 
@@ -181,7 +188,7 @@ export default {
   }
 
   .vts.v-snack--vertical .vts__close {
-    margin: 12px 0 -8px !important;
+    margin: 12px 0 0 !important;
   }
 
   .vts.v-snack--vertical .vts__close--icon {

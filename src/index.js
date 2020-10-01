@@ -3,10 +3,13 @@ import Toast from './Toast.vue'
 function init(Vue, globalOptions = {}) {
   let cmp = null
   const queue = []
+  const vuetify = globalOptions.vuetify
   const property = globalOptions.property || '$toast'
 
+  const Component = Vue.extend(Toast)
+
   function createCmp(options) {
-    const component = new Vue(Toast)
+    const component = new Component({ vuetify });
     const componentOptions = { ...Vue.prototype[property].globalOptions, ...options }
 
     if (componentOptions.slot) {

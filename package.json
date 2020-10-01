@@ -1,13 +1,13 @@
 {
   "name": "vuetify-toast-snackbar",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Basic Vue toast service that uses Vuetify Snackbar component.",
   "author": "eolant",
   "license": "MIT",
-  "homepage": "https://github.com/eolant/vuetify-toast-snackbar",
+  "homepage": "https://github.com/dmitry-sirotenko/vuetify-toast-snackbar",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eolant/vuetify-toast-snackbar.git"
+    "url": "git+https://github.com/dmitry-sirotenko/vuetify-toast-snackbar.git"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -34,14 +34,14 @@
     "snackbar"
   ],
   "devDependencies": {
-    "bili": "^4.8.1",
-    "eslint": "^6.4.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-vue": "^5.2.3",
-    "rollup-plugin-vue": "^5.0.1",
-    "vue": "^2.6.10",
-    "vue-template-compiler": "^2.6.10"
+    "bili": "^4.10.1",
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "rollup-plugin-vue": "^5.1.9",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
   },
   "peerDependencies": {
     "vue": "*",
